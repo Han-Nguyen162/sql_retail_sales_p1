@@ -67,14 +67,16 @@ WHERE
 Select * 
 from retail_sales
 where sale_date = '2022-11-05';
-
----Q.2 Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022:
+```
+---**Q.2 Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022:**
+```sql
 Select * from retail_sales
 where category = 'Clothing'
 and TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
 and quantiy >= 4;
-
+```
 ---Q.3 Write a SQL query to calculate the total sales (total_sale) for each category.:
+```
 Select category,
  SUM(total_sale) as net_sale,
  count(*) as total_orders
